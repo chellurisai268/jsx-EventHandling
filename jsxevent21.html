@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var ar=[]
+            function abc(e){
+                if(e.target.checked===false)
+                {
+                var i=ar.indexOf(e.target.value)
+                ar.splice(i,1)
+                document.getElementById("d4").innerHTML=ar
+
+            }
+            else {
+                ar.push(e.target.value)
+                document.getElementById("d4").innerHTML=ar
+            
+          
+            }
+            }
+            
+
+       
+          
+            var jsh1= <div> <input onChange={(e)=>{abc(e)}} type="checkbox" value="ReactJS"/>:ReactJS <br />
+                            <input onChange={(e)=>{abc(e)}} type="checkbox" value="Angular"/>:Angular<br />
+                            <input onChange={(e)=>{abc(e)}}type="checkbox" value="Nodejs"/>:Nodejs<br />
+                            <input onChange={(e)=>{abc(e)}} type="checkbox" value="Express"/>:Express<br />
+                            <input onChange={(e)=>{abc(e)}} type="checkbox" value="Mongodb"/>:Mongodb<br />
+                            <input onChange={(e)=>{abc(e)}}type="checkbox" value="Mongoos"/>:Mongoos<br />
+                            <input onChange={(e)=>{abc(e)}} type="checkbox" value="Mysql"/>:MySql<br />
+                            
+                <h1 id="d4"></h1>
+
+            </div>
+         
+
+            ReactDOM.render(jsh1,document.getElementById("d1"))
+            
+
+        </script>
+    </body>
+    </html>

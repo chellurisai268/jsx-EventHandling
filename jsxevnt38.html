@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script type="text/babel">
+            var i=1;
+            var t1;
+           function start(){
+           t1=setInterval(function(){
+            var aa=document.getElementById("s1").innerHTML=i+"ms"
+            i++
+            if(i===100){
+                i=0
+            }
+            },1)
+           }
+            
+            var jsh1= <div> 
+                <span id="s1"></span>
+            </div>
+         
+
+            ReactDOM.render(jsh1,document.getElementById("d1"))
+            
+
+        </script>
+    </body>
+    </html>
